@@ -8,7 +8,83 @@
   <title>Breaking-News</title>
 </head>
 <body>
-  
+  <section class="main">
+    <div class="container">
+      <div class="main-input">
+        <form action="#" id="form">
+          <div class="endPoints-section">
+            <select id="EndPoints" class="EndPoints select">
+              <option value="everything" default>Everything</option>
+              <option value="top-headlines">Top Headlines</option>
+            </select>
+          </div>
+
+          <div class="query">
+            <label for="name">Enter a News Topic</label>
+            <div>
+              <input type="text" id="name" placeholder="Search By Name">
+              <select id="query-type" class="query-type select">
+                <option value="q">Title and Body</option>
+                <option value="qInTitle">Title Only</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="sources">
+            <label for="source">Enter Source Website</label>
+            <input type="text" id="source" placeholder="split source with comma">
+          </div>
+
+          <div class="domains">
+            <label for="domain">Enter Domain</label>
+            <input type="text" id="domain" placeholder="restrict the search to website">
+          </div>
+
+          <div class="excludeDomains">
+            <label for="excludeDomain">Enter Domain For Exclude</label>
+            <input type="text" id="excludeDomain" placeholder="remove choose website to remove from search">
+          </div>
+
+          <div class="fromTo">
+            <label for="From">From:</label>
+            <input type="date" id="From" placeholder="for the oldest article allowed">
+            <label for="To">To:</label>
+            <input type="date" id="To" placeholder="for the news article allowed">
+          </div>
+
+          <div class="languages">
+            <label for="language">Choose language:</label>
+            <select id="language">
+              <option value="" default>All</option>
+              <option value="ar">Arabic</option>
+              <option value="de">German</option>
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+              <option value="he">Hebrew</option>
+              <option value="it">Italian</option>
+              <option value="nl">Dutch, Flemish</option>
+              <option value="no">Norwegian</option>
+              <option value="pt">Portuguese</option>
+              <option value="ru">	Russian</option>
+              <option value="se">Northern Sami</option>
+              <option value="zh">Chinese</option>
+            </select>
+          </div>
+
+          <div class="SortBy">
+            <label for="Sort">Sort By</label>
+            <select id="Sort">
+              <option value="relevancy">relevancy</option>
+              <option value="relevancy">popularity</option>
+              <option value="relevancy" default>publishedAt</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <script src="js/news.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/main.js"></script>
