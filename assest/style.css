@@ -98,7 +98,7 @@ label {
 .btn {
   width: 90%;
   margin-top: 20px;
-  border: 0;
+  border: none;
   height: 50px;
   border-radius: 20px;
   background: #eb3b5a;
