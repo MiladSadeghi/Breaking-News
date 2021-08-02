@@ -12,6 +12,10 @@ const form = document.querySelector('#form')
 eventlisteners()
 function eventlisteners() {
   form.addEventListener('submit', submitForm)
+  document.querySelector('#From').addEventListener('change', () => {
+    let today = new Date().toLocaleDateString('en-CA')
+    document.querySelector('#To').value = today
+  })
 }
 
 
@@ -26,7 +30,6 @@ function submitForm(e) {
   const dateTo = document.querySelector('#To').value
   const language = document.querySelector('#language').value
   const sortBy = document.querySelector('#Sort').value
-  
 
   newsAPI.makeAndGetFromAPI(newsTopicQuery, newsTopic, domain, excludeDomain, dateFrom, dateTo, language, sortBy);
 }
