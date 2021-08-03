@@ -5,7 +5,7 @@ const newsAPI = new News()
 
 // variable
 const form = document.querySelector('#form')
-
+let articles;
 
 
 // eventlisteners
@@ -31,5 +31,14 @@ function submitForm(e) {
   const language = document.querySelector('#language').value
   const sortBy = document.querySelector('#Sort').value
 
-  newsAPI.makeAndGetFromAPI(newsTopicQuery, newsTopic, domain, excludeDomain, dateFrom, dateTo, language, sortBy);
+  if(newsTopicQuery === '') {
+    html.showErrorCompleteFields('You Shoud Enter a Topic')
+  } else {
+    newsAPI.makeAndGetFromAPI(newsTopicQuery, newsTopic, domain, excludeDomain, dateFrom, dateTo, language, sortBy)
+    .then((news) => {
+      return news
+    }).then((newsArticles) => {
+      console.log(newsArticles);
+    })
+  }
 }
