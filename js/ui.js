@@ -10,7 +10,7 @@ class HTMLUI {
   }
 
   showResult(news) {
-    console.log(news);
+    document.querySelector('.res').style.display = 'block'
     const resContent = document.querySelector('#res-content')
     const articles = news.articles
     let title;
