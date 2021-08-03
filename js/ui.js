@@ -32,6 +32,12 @@ class HTMLUI {
       </div>
       `
     });
+  }
 
+  changeMain(situation) {
+    console.log(situation);
+    if(situation == 'top-headlines') {
+      document.querySelector('.organiz').style.display = 'none'
+    }
   }
 }
