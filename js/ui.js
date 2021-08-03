@@ -38,6 +38,13 @@ class HTMLUI {
     console.log(situation);
     if(situation == 'top-headlines') {
       document.querySelector('.organiz').style.display = 'none'
+      document.querySelector('.top-headlines').style.display = 'flex'
+      return 'top-headlines'
+    }
+    if(situation == 'everything') {
+      document.querySelector('.organiz').style.display = 'flex'
+      document.querySelector('.top-headlines').style.display = 'none'
+      return 'everything'
     }
   }
 }
