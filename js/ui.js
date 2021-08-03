@@ -35,7 +35,6 @@ class HTMLUI {
   }
 
   changeMain(situation) {
-    console.log(situation);
     if(situation == 'top-headlines') {
       document.querySelector('.organiz').style.display = 'none'
       document.querySelector('.top-headlines').style.display = 'flex'
