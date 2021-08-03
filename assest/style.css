@@ -9,6 +9,7 @@
 
 body {
   background: linear-gradient(90deg, hsla(232, 73%, 65%, 1) 0%, hsla(279, 33%, 48%, 1) 100%);
+  position: relative;
 }
 
 .main {
@@ -71,7 +72,7 @@ input, select {
   outline: none;
   border: 2px solid #a55eea;
   transition: border 0.2s ease-in-out;
-  font-size: 1.4rem;
+  font-size: 1.19rem;
 }
 
 select {
@@ -115,4 +116,24 @@ label {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.error {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 2%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 50px;
+  border-radius: 15px;
+  background: #eb3b5a;
+  color: #fff;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
