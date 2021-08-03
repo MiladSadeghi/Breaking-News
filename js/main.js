@@ -38,7 +38,10 @@ function submitForm(e) {
     .then((news) => {
       return news
     }).then((newsArticles) => {
-      console.log(newsArticles);
+      console.log(newsArticles.articles);
+      if(newsArticles.articles === undefined || newsArticles.articles.length == 0) {
+        html.showErrorCompleteFields('Nothing Found')
+      }
     })
   }
 }
