@@ -68,9 +68,7 @@ function submitForm(e) {
     const country = document.querySelector("#country-list").value;
     const category = document.querySelector("#category-list").value;
     console.log(query, country, category);
-    if (country === "" || category === "") {
-      html.showErrorCompleteFields("You Shoud Enter a Country or Category");
-    } else {
+    if (country !== '' || category !== '') {
       newsAPI
         .makeAndGetFromAPI("top-headlines", query, country, category)
         .then((news) => {
@@ -86,6 +84,8 @@ function submitForm(e) {
             html.showResult(newsArticles);
           }
         });
+    } else {
+      html.showErrorCompleteFields("You Shoud Enter a Country or Category");
     }
   }
 }
