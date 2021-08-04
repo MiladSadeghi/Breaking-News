@@ -59,6 +59,7 @@ function submitForm(e) {
           ) {
             html.showErrorCompleteFields("Nothing Found");
           } else {
+            html.deleteResult()
             html.showResult(newsArticles);
           }
         });
@@ -69,6 +70,7 @@ function submitForm(e) {
     const category = document.querySelector("#category-list").value;
     console.log(query, country, category);
     if (country !== '' || category !== '') {
+
       newsAPI
         .makeAndGetFromAPI("top-headlines", query, country, category)
         .then((news) => {
@@ -81,6 +83,7 @@ function submitForm(e) {
           ) {
             html.showErrorCompleteFields("Nothing Found");
           } else {
+            html.deleteResult()
             html.showResult(newsArticles);
           }
         });
