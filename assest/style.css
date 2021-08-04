@@ -78,7 +78,7 @@ input, select {
 input, select {
   height: 50px;
   border-radius: 20px;
-  padding: 5px 15px;
+  padding: 0 15px;
   outline: none;
   border: 2px solid #a55eea;
   transition: border 0.2s ease-in-out;
@@ -237,4 +237,26 @@ label {
 
 .query, .country, .category {
   width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+  .res {
+    margin: 30px 0;
+  }
+  label {
+    font-size: 0.9rem;
+  }
+  input, select {
+    font-size: 1rem;
+    height: 40px;
+  }
+  .main-input {
+    padding: 30px;
+  }
+  select option {
+    width: 50%;
+  }
 }
