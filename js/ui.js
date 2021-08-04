@@ -46,4 +46,8 @@ class HTMLUI {
       return 'everything'
     }
   }
+
+  deleteResult() {
+    document.querySelector('#res-content').innerHTML = ''
+  }
 }
