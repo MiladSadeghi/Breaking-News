@@ -182,6 +182,7 @@ label {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
+  word-break: break-word;
 }
 
 .some span {
@@ -280,5 +281,11 @@ label {
   }
   .card {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .card {
+    width: 90%;
   }
 }
